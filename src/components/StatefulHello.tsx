@@ -2,25 +2,25 @@
 
 import * as React from "react";
 
-export interface Props {
+export interface IProps {
   name: string;
   enthusiasmLevel?: number;
 }
 
-interface State {
+interface IState {
   currentEnthusiasm: number;
 }
 
-class Hello extends React.Component<Props, State> {
-  constructor(props: Props) {
+class Hello extends React.Component<IProps, IState> {
+  constructor(props: IProps) {
     super(props);
     this.state = { currentEnthusiasm: props.enthusiasmLevel || 1 };
   }
 
-  onIncrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm + 1);
-  onDecrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm - 1);
+  public onIncrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm + 1);
+  public onDecrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm - 1);
 
-  render() {
+  public render() {
     const { name } = this.props;
 
     if (this.state.currentEnthusiasm <= 0) {
@@ -38,7 +38,7 @@ class Hello extends React.Component<Props, State> {
     );
   }
 
-  updateEnthusiasm(currentEnthusiasm: number) {
+  public updateEnthusiasm(currentEnthusiasm: number) {
     this.setState({ currentEnthusiasm });
   }
 }

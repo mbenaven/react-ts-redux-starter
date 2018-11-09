@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // This is the TS specific typing implementation
-export interface Props {
+export interface IProps {
   name: string;
   enthusiasmLevel?: number;
   onIncrement?: () => void;
@@ -10,7 +10,7 @@ export interface Props {
 
 // Writing functions is one of two primary ways React allows us to make components. If we wanted, we could have written it out as a class as follows:
 // Use classes over SFCs when you have state or need to handle lifecyle hooks.
-function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: Props) {
+function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: IProps) {
   if (enthusiasmLevel <= 0) {
     throw new Error('You could be a little more enthusiastic. :D');
   }
