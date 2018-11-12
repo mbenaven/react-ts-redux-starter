@@ -5,6 +5,7 @@
   "dependencies": {
     "@types/react-redux": "^6.0.9",
     "ajv": "^6.5.4",
+    "axios": "^0.18.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-redux": "^5.1.0",

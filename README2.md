@@ -62,3 +62,12 @@ Containers:
         - Wraps our component to pass data in
         - State values mapped to props
         - turns hello component into container using mapStateToProps and mapDispatchToProps
+
+Service:
+    Propagate data via state with redux
+    https://x-team.com/blog/react-redux-api-actions-reducers/
+    Axios to make the request
+    https://alligator.io/react/axios-react/
+    https://mediatemple.net/blog/tips/loading-and-using-external-data-in-react/
+    https://github.com/axios/axios/blob/14057dc0bd9811a9fda773588f66de9f4aa0f617/README.md
+    https://blog.hellojs.org/fetching-api-data-with-react-js-460fe8bbf8f2
