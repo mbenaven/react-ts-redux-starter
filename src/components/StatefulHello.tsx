@@ -1,4 +1,8 @@
-// src/components/StatefulHello.tsx
+/**
+ *  Refer to the hello.tsx for reference to the redux implementation, this StatefulHello.tsx is currently not being used.
+ *  Two buttons which update the number of exclaimation points represented by this.state.currentEnthusiasm
+ *  Store values are set in src/index.tsx and mapped to props in the Hello.tsx container 
+ */
 
 import * as React from "react";
 
@@ -17,6 +21,8 @@ class Hello extends React.Component<IProps, IState> {
     this.state = { currentEnthusiasm: props.enthusiasmLevel || 1 };
   }
 
+  // onIncrement and onDecrement are the event handlers for our buttons
+  // A common mistake is to initialize these in the render method which allocates closures one every call to render
   public onIncrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm + 1);
   public onDecrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm - 1);
 
@@ -38,6 +44,7 @@ class Hello extends React.Component<IProps, IState> {
     );
   }
 
+  // The component will re-render as appropriate on state updates
   public updateEnthusiasm(currentEnthusiasm: number) {
     this.setState({ currentEnthusiasm });
   }

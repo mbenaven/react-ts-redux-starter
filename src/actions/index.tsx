@@ -5,7 +5,7 @@ import * as constants from '../constants';
 // We also created a type (EnthusiasmAction) to describe cases where an action could be an increment or a decrement. 
 // Finally, we made two functions that actually manufacture the actions which we can use instead of writing out bulky object literals.
 // Look into redux-action library 
-export interface IncrementEnthusiasm {
+export interface IIncrementEnthusiasm {
     type: constants.INCREMENT_ENTHUSIASM;
 }
 
@@ -13,9 +13,9 @@ export interface IDecrementEnthusiasm {
     type: constants.DECREMENT_ENTHUSIASM;
 }
 
-export type EnthusiasmAction = IncrementEnthusiasm | IDecrementEnthusiasm;
+export type EnthusiasmAction = IIncrementEnthusiasm | IDecrementEnthusiasm;
 
-export function incrementEnthusiasm(): IncrementEnthusiasm {
+export function incrementEnthusiasm(): IIncrementEnthusiasm {
     return {
         type: constants.INCREMENT_ENTHUSIASM
     }

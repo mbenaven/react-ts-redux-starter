@@ -1,6 +1,12 @@
+/**
+ * Refer to StatefulHello.tsx if you want to see non-redux implementation
+ * Below are the class and function implementations
+ * Two buttons which update the number of exclaimation points represented by this.state.currentEnthusiasm
+ * Store values are set in src/index.tsx and mapped to props in the Hello.tsx container 
+ */
+
 import * as React from 'react';
 
-// This is the TS specific typing implementation
 export interface IProps {
   name: string;
   enthusiasmLevel?: number;
@@ -8,8 +14,10 @@ export interface IProps {
   onDecrement?: () => void;
 }
 
-// Writing functions is one of two primary ways React allows us to make components. If we wanted, we could have written it out as a class as follows:
+// Writing functions is one of two primary ways React allows us to make components. If we wanted, we could have written it out as a class:
 // Use classes over SFCs when you have state or need to handle lifecyle hooks.
+
+// Callbacks bound to the buttons
 function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: IProps) {
   if (enthusiasmLevel <= 0) {
     throw new Error('You could be a little more enthusiastic. :D');
